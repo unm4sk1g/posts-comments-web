@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-4 min-h-screen px-3" v-if="ready">
+  <div class="container mx-auto max-w-5xl py-4 min-h-screen px-3" v-if="ready">
     <div
       class="flex items-center justify-center relative mb-4"
       v-if="postsData.length > 0"
