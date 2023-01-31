@@ -12,6 +12,6 @@
   }
 
   .avatar {
-    @apply rounded text-lg text-white rounded-full p-2;
+    @apply text-lg text-white rounded-full p-2 aspect-square h-12 w-12 flex justify-center items-center;
   }
 }

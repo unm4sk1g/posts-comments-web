@@ -1,6 +1,6 @@
 <template>
   <div class="post bg-white bg-opacity-90 p-6 mb-4 rounded-md" v-if="post.user">
-    <div class="top-bar flex justify-between">
+    <div class="top-bar md:flex justify-between">
       <div class="company-info flex flex-col">
         <h1 class="title text-4xl">
           {{ post.user?.company?.name }}
@@ -12,7 +12,7 @@
           }}</a>
         </div>
       </div>
-      <div class="actions md:flex-row flex flex-col items-end">
+      <div class="actions flex-row flex items-end mt-4 md:mt-0">
         <a :href="getMapsURL(post)" target="_blank"
           ><button class="btn">
             <i class="fa fa-location-dot mr-0 md:mr-2"></i
@@ -20,13 +20,13 @@
           </button></a
         >
         <a :href="'tel:' + post.user?.phone"
-          ><button class="ml-0 md:ml-2 btn">
+          ><button class="ml-2 btn">
             <i class="fa fa-phone mr-0 md:mr-2"></i
             ><span class="hidden md:inline">Call</span>
           </button></a
         >
         <a :href="'mailto:' + post.user?.email"
-          ><button class="ml-0 md:ml-2 btn">
+          ><button class="ml-2 btn">
             <i class="fa fa-envelope mr-0 md:mr-2"></i
             ><span class="hidden md:inline">Email</span>
           </button></a
@@ -37,8 +37,8 @@
       <h1 class="title text-3xl flex flex-col">{{ post.title }}</h1>
       <p class="caption text">{{ post.body }}</p>
     </div>
-    <div class="bottom-bar flex justify-between items-center mt-6">
-      <div class="user-info flex justify-center items-center">
+    <div class="bottom-bar md:flex justify-between items-center mt-6">
+      <div class="user-info flex md:justify-center items-center">
         <div :class="generateAvatarColor()">
           {{ getAvatarContent(post.user) }}
         </div>
@@ -47,7 +47,7 @@
           post.user?.email
         }}</a>
       </div>
-      <div>
+      <div class="mt-4 md:mt-0">
         <router-link :to="`/posts/${post.id}`"
           ><span
             ><i class="fa fa-comments mr-2"></i> View Comments</span
