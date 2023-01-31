@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-4 min-h-screen">
+  <div class="container mx-auto py-4 min-h-screen px-3">
     <PostComponent :post="post" v-if="ready" />
     <div class="comments">
       <CommentComponent
