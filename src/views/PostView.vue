@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-4 min-h-screen px-3">
+  <div class="container mx-auto max-w-5xl py-4 min-h-screen px-3">
     <PostComponent :post="post" v-if="ready" />
     <div class="comments">
       <CommentComponent
@@ -27,7 +27,6 @@ export default {
     fetchPost(id) {
       return this.$axios.get(`/posts/${id}`).then((response) => {
         if (response.data) {
-          console.log(response.data);
           this.post = response.data;
           Promise.all([
             this.fetchUser(this.post.userId),
