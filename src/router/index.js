@@ -6,6 +6,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "/",
+    redirect: "/posts",
+  },
+  {
     path: "/posts",
     name: "posts",
     component: PostsView,
