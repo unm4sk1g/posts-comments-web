@@ -1,0 +1,17 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+@layer components {
+  .btn {
+    @apply border px-4 border-gray-200 py-2 rounded-md;
+  }
+
+  .avatar {
+    @apply rounded text-lg text-white rounded-full p-2;
+  }
+}
